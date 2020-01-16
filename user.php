@@ -1,4 +1,11 @@
-<?php include 'inc/headeruser.php'; ?>
+<?php
+include_once 'config/connectdb.php';
+session_start();
+
+if($_SESSION['useremail'] == ""){
+  header('location:index.php');
+}
+include 'inc/headeruser.php'; ?>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">

@@ -1,6 +1,7 @@
 <?php
 include_once 'config/connectdb.php';
 session_start();
+
 if(isset($_POST['btn_login'])){
   $useremail    = $_POST['txt_email' ];
   $password = $_POST['txt_password'];
@@ -16,10 +17,20 @@ if(isset($_POST['btn_login'])){
 
   if($row['useremail'] == $useremail AND $row['password'] == $password  AND $row['role'] == 'Admin'){
     
+    $_SESSION['userid']    = $row['userid'];
+    $_SESSION['username']  = $row['username'];
+    $_SESSION['useremail'] = $row['useremail'];
+    $_SESSION['role']      = $row['role'];
+
     echo $success = 'Login successfull';
     header('refresh:1; dashboard.php');
 
   } else if ($row['useremail'] == $useremail AND $row['password'] == $password AND $row['role'] == 'User'){
+
+    $_SESSION['userid']    = $row['userid'];
+    $_SESSION['username']  = $row['username'];
+    $_SESSION['useremail'] = $row['useremail'];
+    $_SESSION['role']      = $row['role'];
 
     $success = 'Login successfull';
     header('refresh:1; user.php');  
