@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Admin | POS</title>
+  <title>User | POS</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -81,17 +81,17 @@ desired effect
             <!-- Menu Toggle Button -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <!-- The user image in the navbar-->
-              <img src="assets/AdminLTE/img/tika.jpg" class="user-image" alt="User Image">
+              <img src="assets/AdminLTE/img/ing.png" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Tika</span>
+              <span class="hidden-xs">ING</span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
               <li class="user-header">
-                <img src="assets/AdminLTE/img/tika.jpg" class="img-circle" alt="User Image">
+                <img src="assets/AdminLTE/img/ing.png" class="img-circle" alt="User Image">
                 <p>
-                  Tika - Web Developer
-                  <small>since Nov. 2020</small>
+                  ING - Web Developer
+                  <small>since 2020</small>
                 </p>
               </li>
               <!-- Menu Body -->
@@ -133,10 +133,10 @@ desired effect
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="assets/AdminLTE/img/tika.jpg" class="img-circle" alt="User Image">
+          <img src="assets/AdminLTE/img/ing.png" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Welcome - Tika</p>
+          <p>Welcome - ING</p>
           <!-- Status -->
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
@@ -160,17 +160,6 @@ desired effect
         <!-- Optionally, you can add icons to the links -->
         <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
         <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
-        <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
-            <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="#">Link in level 2</a></li>
-            <li><a href="#">Link in level 2</a></li>
-          </ul>
-        </li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>
