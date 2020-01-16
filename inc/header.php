@@ -83,14 +83,14 @@ desired effect
               <!-- The user image in the navbar-->
               <img src="assets/AdminLTE/img/tika.jpg" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
-              <span class="hidden-xs">Tika</span>
+              <span class="hidden-xs"><?php  echo ucfirst( $_SESSION['username']); ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
               <li class="user-header">
                 <img src="assets/AdminLTE/img/tika.jpg" class="img-circle" alt="User Image">
                 <p>
-                  Tika - Web Developer
+                  <?php  echo ucfirst( $_SESSION['username']); ?> - Web Developer
                   <small>since Nov. 2020</small>
                 </p>
               </li>
@@ -115,7 +115,7 @@ desired effect
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="logout.php" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
@@ -136,7 +136,7 @@ desired effect
           <img src="assets/AdminLTE/img/tika.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Welcome - Tika</p>
+          <p>Welcome - <?php  echo ucfirst( $_SESSION['username']); ?></p>
           <!-- Status -->
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>

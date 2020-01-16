@@ -1,3 +1,12 @@
+<!-- jQuery 3 -->
+<script src="assets/jquery/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<!-- iCheck -->
+<script src="assets/plugins/iCheck/icheck.min.js"></script>
+<!-- SweetAlert -->
+<script src="assets/sweetalert/sweetalert.js"></script>
+
 <?php
 include_once 'config/connectdb.php';
 session_start();
@@ -22,8 +31,23 @@ if(isset($_POST['btn_login'])){
     $_SESSION['useremail'] = $row['useremail'];
     $_SESSION['role']      = $row['role'];
 
-    echo $success = 'Login successfull';
-    header('refresh:1; dashboard.php');
+    // echo $success = 'Login successfull';
+
+    // SweetAlert
+
+    echo'<script type="text/javascript">
+    jQuery(function validation(){
+
+      swal({
+        title: "You are logging in, '.ucfirst($_SESSION['username']).'",
+        text: "Details Matched",
+        icon: "success",
+        button: "Loading ...",
+      });
+
+    });
+    </script>';
+    header('refresh:2 dashboard.php');
 
   } else if ($row['useremail'] == $useremail AND $row['password'] == $password AND $row['role'] == 'User'){
 
@@ -32,8 +56,23 @@ if(isset($_POST['btn_login'])){
     $_SESSION['useremail'] = $row['useremail'];
     $_SESSION['role']      = $row['role'];
 
-    $success = 'Login successfull';
-    header('refresh:1; user.php');  
+    // $success = 'Login successfull';
+
+    // SweetAlert
+
+    echo'<script type="text/javascript">
+    jQuery(function validation(){
+
+      swal({
+        title: "You are logging in, '.ucfirst($_SESSION['username']).'",
+        text: "Details Matched",
+        icon: "success",
+        button: "Loading ...",
+      });
+
+    });
+    </script>';
+    header('refresh:2; user.php');  
 
   } else {
     echo "Log in failed";
@@ -105,14 +144,15 @@ if(isset($_POST['btn_login'])){
 </div>
 <!-- /.login-box -->
 
-<!-- jQuery 3 -->
-<script src="assets/jquery/jquery.min.js"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<!-- iCheck -->
-<script src="assets/plugins/iCheck/icheck.min.js"></script>
-<!-- Optionally, you can add Slimscroll and FastClick plugins.
-     Both of these plugins are recommended to enhance the
-     user experience. -->
+
+<script>
+  $(function () {
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' /* optional */
+    });
+  });
+</script>
 </body>
 </html>
